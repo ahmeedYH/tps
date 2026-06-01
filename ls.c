@@ -1,22 +1,4 @@
-/*
- * Objectif du fichier :
- *   Refaire une version simplifiée de la commande ls.
- *
- * Rôle principal du programme :
- *   Ouvrir un répertoire, lire ses entrées et afficher pour chaque fichier
- *   son type, ses droits, son nombre de liens et sa taille.
- *
- * Appels système importants utilisés :
- *   open()       : ouvre le répertoire.
- *   getdents64() : lit les entrées du répertoire.
- *   stat()       : récupère les métadonnées de chaque entrée.
- *   write()      : affiche le résultat sur la sortie standard.
- *
- * Ce que je dois dire en soutenance :
- *   "Cette version n'appelle pas la commande ls. Elle lit directement le
- *   contenu du répertoire avec getdents64, puis utilise stat pour afficher
- *   des informations proches de ls -l."
- */
+
 
 #define _GNU_SOURCE
 #include <sys/syscall.h>
